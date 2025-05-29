@@ -20,7 +20,7 @@ class App {
 
   async loadTranslations() {
     try {
-      const response = await fetch('translations.json');
+      const response = await fetch('./src/translations.json');
       this.translations = await response.json();
       this.translatePage(this.currentLanguage);
     } catch (error) {
